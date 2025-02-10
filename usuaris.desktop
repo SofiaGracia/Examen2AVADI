@@ -1,0 +1,11 @@
+[Desktop Entry]
+
+Type=Application
+
+Name=Main2
+
+Comment=Main2 with PySide6.
+
+Path=/opt/main2
+
+Exec=/opt/main2/main2
