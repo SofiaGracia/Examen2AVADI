@@ -40,6 +40,12 @@ class UserApp(QMainWindow):
         # self.layout.addWidget(self.role_input)
 
         # Botons per afegir i modificar
+        # He possat lo del partial per a que no m'aparga la finestra de plenar els camps
+        # durant el test i que es quede penjada. Vull dir, com no sabia com
+        # no cridar a esta finestra durant el test l'he posat fora de les funcions
+        # add_user i modificar_user i axina cride a estes funcions desde la funció
+        # de executar_finestra. Però com necessitava saber qui crida a la finestra he gastat partial.
+        # Ho faig aixina pq no sé fer test de un QMainWindow amb un Qdialeg
         self.add_button = QPushButton("Afegir Usuari")
         self.add_button.clicked.connect(partial(self.executar_finestra, "add"))
         self.layout.addWidget(self.add_button)
